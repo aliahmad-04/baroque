@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMBROIDERED NET UF-4183</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Cabin", sans-serif;
+        }
+
+        marquee {
+            width: 100%;
+            height: 5vh;
+            font-size: medium;
+            font-family: "Cabin", sans-serif;
+            /* text-align: center; */
+            background-color: rgb(47, 45, 45);
+            color: rgb(220, 212, 212);
+        }
+
+        .site-navbar {
+            display: flex;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 10vh;
+            border: 2px solid rgb(223, 218, 218);
+            background-color: white;
+        }
+
+        .div1 {
+            width: 30%;
+        }
+
+        .div2 {
+            width: 60%;
+
+        }
+
+        .div3 {
+            width: 30%;
+        }
+
+        .div1 img {
+
+            /* display: flex; */
+            position: relative;
+            top: 35%;
+            left: 8%;
+            width: 7%;
+            height: 30%;
+            opacity: 0.5;
+        }
+
+        .navbar:hover {
+            background-color: none;
+        }
+
+        .div2 img {
+            display: flex;
+            margin: auto;
+            justify-items: center;
+            width: 20%;
+            height: 100%;
+        }
+
+        .div3 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .navbar>div img:hover {
+            cursor: pointer;
+        }
+
+        .row {
+            margin-top: 0;
+            display: flex !important;
+            /* Change back to flex for proper alignment */
+        }
+
+        .sticky-column {
+            position: sticky;
+            top: 10vh;
+            background: white;
+            /* height: 100vh; */
+            z-index: 0;
+            align-self: flex-start;
+            /* Important for sticky to work in flex */
+        }
+
+        /* Make the middle column scrollable
+        .col-5:not(.sticky-column) {
+            This is the middle column that should scroll
+            min-height: 400vh;
+            Ensure it has enough content to scroll
+        } */
+
+        .container-fluid {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .col-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            padding-top: 2%;
+        }
+
+        .col-2 img {
+            width: 25%;
+            height: auto;
+        }
+
+        .col-2 a {
+            margin-bottom: 5%;
+        }
+
+        .col-2 img:hover {
+            cursor: pointer;
+            border: 2px solid black;
+        }
+
+        .col-5 img {
+            width: 100%;
+            height: auto;
+            padding-bottom: 5%;
+        }
+
+        #pd-g-1,
+        #pd-g-2,
+        #pd-g-3,
+        #pd-g-4,
+        #pd-g-5,
+        #pd-g-6,
+        #pd-g-7 {
+            scroll-margin-top: 15vh;
+            /* 10vh navbar + 5vh extra space */
+        }
+
+        .right-col {
+            padding-left: 5%;
+        }
+
+        .name {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .name h5 {
+            /* display: flex; */
+            color: rgb(143, 146, 150);
+            font-size: medium;
+            letter-spacing: 0.2em;
+            margin-top: 5%;
+        }
+
+        #code {
+            color: rgb(143, 146, 150);
+            font-size: small;
+            letter-spacing: 0.2em;
+        }
+
+        #price {
+            font-size: small;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+        }
+
+        hr {
+            width: 80%;
+        }
+
+        .type {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .type h6 {
+            color: rgb(77, 77, 85);
+            font-size: medium;
+            letter-spacing: 0.2em;
+            margin-bottom: 4%;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 4%;
+        }
+
+        .button-container button {
+            padding: 6% 8%;
+            border: 1px solid black;
+            background-color: white;
+            font-size: small;
+            letter-spacing: 0.2em;
+        }
+
+        .border {
+            border: 2px solid rgb(99, 97, 97);
+            color: rgb(99, 97, 97);
+        }
+
+        .addon {
+            margin-top: 5%;
+        }
+
+        .addon h6 {
+            letter-spacing: 0.1em;
+            margin-bottom: 6%;
+        }
+
+        #number {
+            width: 25%;
+            margin-top: 5%;
+            padding: 2% 0;
+            text-align: center;
+            border: 1px solid rgb(156, 154, 154);
+        }
+
+        #add-to-cart {
+            margin-top: 8%;
+            margin-bottom: 2%;
+            padding: 2.5% 0;
+            width: 75%;
+            background-color: rgb(29, 28, 28);
+            color: white;
+            border: 2px solid black;
+            font-size: small;
+            letter-spacing: 0.2em;
+            text-decoration: none !important;
+            /* Remove underline from link */
+            display: inline-block;
+            /* Maintain button-like display */
+            text-align: center;
+        }
+
+        #add-to-cart:hover {
+            cursor: pointer;
+            background-color: transparent;
+            color: black !important;
+            text-decoration: none !important;
+        }
+
+        /* Target the link wrapper to remove any link styling */
+        a:has(#add-to-cart) {
+            text-decoration: none;
+        }
+
+        .btn {
+            width: 80%;
+            font-size: small;
+            letter-spacing: 0.2em;
+        }
+
+        .description {
+            width: 400px;
+            white-space: normal;
+        }
+
+        #text {
+            display: flex;
+            /* border: 2px solid black; */
+            width: 100%;
+            height: 20vh;
+            align-items: center;
+            justify-content: center;
+            word-spacing: 0.5em;
+            letter-spacing: 0.2em;
+            font-size: xx-large;
+            justify-items: center;
+            font-family: "Cabin", sans-serif;
+        }
+
+        .card-img-container {
+            position: relative;
+            overflow: hidden;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+        }
+
+        .card-img-container img {
+            border-radius: 0;
+            width: 100%;
+        }
+
+        .card-text {
+            font-size: small;
+        }
+
+        .card-text b {
+            font-weight: bold;
+        }
+
+        .card-img-top {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .card-img-container:hover .main-img {
+            opacity: 0;
+        }
+
+        .card-img-container:hover .hover-img {
+            opacity: 1;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            margin-top: 2%;
+            padding-left: 4%;
+            height: 70vh;
+            width: 100%;
+            background-color: rgb(47, 47, 47);
+        }
+
+        .about {
+            color: white;
+            padding-top: 4%;
+            padding-left: 2%;
+            /* width: 30%; */
+            font-size: small;
+            margin-left: 1%;
+
+        }
+
+        .about p {
+            color: rgb(149, 163, 174);
+            margin-top: 2%;
+            cursor: pointer;
+        }
+
+        .about h4 {
+
+            font-size: medium;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+        }
+
+        .customer {
+            color: white;
+            padding-top: 4%;
+            padding-left: 2%;
+            font-size: small;
+            /* width: 30%; */
+            /* margin-left: 4%; */
+
+        }
+
+        .customer p {
+            color: rgb(149, 163, 174);
+            margin-top: 2%;
+            cursor: pointer;
+        }
+
+        .customer h4 {
+
+            font-size: medium;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+        }
+
+        .policies {
+            color: white;
+            padding-top: 4%;
+            padding-left: 2%;
+            /* width: 30%; */
+            font-size: small;
+            padding-right: 5%;
+
+        }
+
+        .policies p {
+            color: rgb(149, 163, 174);
+            margin-top: 2%;
+            cursor: pointer;
+        }
+
+        .policies h4 {
+
+            font-size: medium;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+        }
+
+        .social-icon {
+            width: 50%;
+            height: 20%;
+            margin-top: 20%;
+        }
+
+        .visa-card {
+            width: 60%;
+            height: 15%;
+            margin-top: 50%;
+            margin-left: 10%;
+        }
+
+        #copyright {
+            margin-top: 80%;
+            font-size: x-small;
+        }
+    </style>
+</head>
+
+<body>
+    <marquee behavior="" direction="" scrollamount="15" loop="-1">FOR INTERNATIONAL WEBSITE VISIT
+        WWW.BAROQUE&emsp;&emsp;&emsp;&emsp;&emsp; CALL US AT: USN 111-302-302&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        FOR INTERNATIONAL WEBSITE VISIT WWW.BAROQUE&emsp;&emsp;&emsp;&emsp;&emsp; CALL US AT: USN 111-302-302 </marquee>
+    <!-- To make navbar -->
+    <div class="site-navbar">
+        <div class="div1">
+            <img src="/Images/menuicon.png" alt="">
+        </div>
+        <div class="div2">
+            <img src="/Images/baroque.png" alt="">
+        </div>
+        <div class="div3">
+            <img src="/Images/nav.png" alt="">
+        </div>
+    </div>
+    <!-- Using Bootstrap grid system  -->
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col-2 sticky-column">
+                <!-- col-2 (Left Sticky) -->
+                <a href="#pd-g-1"><img src="/Images/pd-1.webp" alt=""></a>
+                <a href="#pd-g-2"><img src="/Images/pd-2.webp" alt=""></a>
+                <a href="#pd-g-3"><img src="/Images/pd-3.webp" alt=""></a>
+                <a href="#pd-g-4"><img src="/Images/pd-4.webp" alt=""></a>
+                <a href="#pd-g-5"><img src="/Images/pd-5.webp" alt=""></a>
+                <a href="#pd-g-6"><img src="/Images/pd-6.webp" alt=""></a>
+                <a href="#pd-g-7"><img src="/Images/pd-7.webp" alt=""></a>
+            </div>
+            <div class="col-5">
+                <!-- col-5 (Middle Scrollable) -->
+                <img id="pd-g-1" style="padding-top: 5%;" src="/Images/pd-g-1.webp" alt="">
+                <img id="pd-g-2" src="/Images/pd-g-2.webp" alt="">
+                <img id="pd-g-3" src="/Images/pd-g-3.webp" alt="">
+                <img id="pd-g-4" src="/Images/pd-g-4.webp" alt="">
+                <img id="pd-g-5" src="/Images/pd-g-5.webp" alt="">
+                <img id="pd-g-6" src="/Images/pd-g-6.webp" alt="">
+                <img id="pd-g-7" src="/Images/pd-g-7.webp" alt="">
+            </div>
+            <div" class="col-5 right-col sticky-column">
+                <!-- col-5 (Right Sticky) -->
+                <div class="name">
+                    <h5>EMBROIDERED NET UF-4183</h5>
+                    <p id="price">PKR 19,950.00</p>
+                    <p id="code">EFUF4183 ● 3 PIECE</p>
+                </div>
+                <hr>
+                <div class="type">
+                    <h6>TYPE:</h6>
+                    <div class="button-container">
+                        <button>UNSTITCHED</button>
+                        <button class="border">STITCHED</button>
+                    </div>
+                    <div class="addon">
+                        <h6>ADD ON:</h6>
+                        <input type="checkbox" name="" id=""> LINING + PKR 2500
+                    </div>
+                    <input type="number" name="" id="number" placeholder="1">
+                    <a href="/fourthpage.html" style="text-decoration: none; display: inline-block; width: 75%;">
+                        <button id="add-to-cart" style="width: 100%; text-decoration: none;">ADD TO CART</button>
+                    </a>
+                    <hr>
+                    <div class="dropdown">
+                        <!-- icon  -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-box-seam" viewBox="0 0 16 16">
+                            <path
+                                d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z" />
+                        </svg>
+                        <!-- dropdown -->
+                        <a class="btn dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            PRODUCT DETAILS
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">NOTE : Model is wearing XS size.</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Embroidered net front (1 yard)</a></li>
+                            <li><a class="dropdown-item" href="#">Embroidered net back (1 yard)</a></li>
+                            <li><a class="dropdown-item" href="#">Embroidered net sleeves (0.75 yard)</a></li>
+                            <li><a class="dropdown-item" href="#">Embroidered net front & back & sleeves border (3.30
+                                    yard)</a></li>
+                            <li><a class="dropdown-item" href="#">Embroidered net dupatta (2.75 yard)</a></li>
+                            <li><a class="dropdown-item" href="#">Embroidered organza dupatta border (2.50 yard)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Embroidered organza dupatta border (5.50 yard)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Digital printed silk trouser (5 yard)</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <!-- icon  -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-airplane" viewBox="0 0 16 16">
+                            <path
+                                d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599" />
+                        </svg>
+                        <!-- dropdown -->
+                        <a class="btn dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            DELIVERY </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Dispatch Time : Within 1 Week</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <!-- icon  -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-tag-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        </svg>
+                        <!-- dropdown -->
+                        <a class="btn dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            DESCRIPTION </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item description" href="#">This elegant ensemble features intricately
+                                    embroidered net on the front, back, and sleeves, with delicate borders that enhance
+                                    its refined look. Complemented by an embroidered net dupatta adorned with an
+                                    embroidered organza border, it offers a harmonious blend of textures. The digital
+                                    printed silk trousers complete the outfit with a smooth, comfortable finish, making
+                                    it perfect for occasions where you want to feel confident and graceful.</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <!-- icon  -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
+                            <path
+                                d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
+                        </svg>
+                        <!-- dropdown -->
+                        <a class="btn dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            RETURN AND EXCHANGE </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item description" href="#">We offer 10-days exchange policy starting
+                                    from the date of order delivery.
+
+                                    In case of any damaged OR missing item, the concern must be raised within 48 hours
+                                    to our customer care team for further assistance, otherwise the complaints cannot be
+                                    accepted.
+
+                                    For additional information and the exchange form click here</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="dropdown">
+                        <!-- icon  -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-leaf" viewBox="0 0 16 16">
+                            <path
+                                d="M1.4 1.7c.216.289.65.84 1.725 1.274 1.093.44 2.884.774 5.834.528l.37-.023c1.823-.06 3.117.598 3.956 1.579C14.16 6.082 14.5 7.41 14.5 8.5c0 .58-.032 1.285-.229 1.997q.198.248.382.54c.756 1.2 1.19 2.563 1.348 3.966a1 1 0 0 1-1.98.198c-.13-.97-.397-1.913-.868-2.77C12.173 13.386 10.565 14 8 14c-1.854 0-3.32-.544-4.45-1.435-1.125-.887-1.89-2.095-2.391-3.383C.16 6.62.16 3.646.509 1.902L.73.806zm-.05 1.39c-.146 1.609-.008 3.809.74 5.728.457 1.17 1.13 2.213 2.079 2.961.942.744 2.185 1.22 3.83 1.221 2.588 0 3.91-.66 4.609-1.445-1.789-2.46-4.121-1.213-6.342-2.68-.74-.488-1.735-1.323-1.844-2.308-.023-.214.237-.274.38-.112 1.4 1.6 3.573 1.757 5.59 2.045 1.227.215 2.21.526 3.033 1.158.058-.39.075-.782.075-1.158 0-.91-.288-1.988-.975-2.792-.626-.732-1.622-1.281-3.167-1.229l-.316.02c-3.05.253-5.01-.08-6.291-.598a5.3 5.3 0 0 1-1.4-.811" />
+                        </svg>
+                        <!-- dropdown -->
+                        <a class="btn dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            CARE INSTRUCTIONS </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item description" href="#">Dry clean recommended
+                                    Iron the clothes at moderate temperature
+                                    Do not use any type of bleach or stain removing chemicals
+                                    Actual color may slightly vary from the image shown
+                                    Unstitched includes fabric only
+                                    Slight variation in colour and embellishments may occur after restocking of specific
+                                    articles
+                                    Custom length or any other changing which varies from our standard size chart comes
+                                    under customized stitching for stitched articles.
+                                    Pret/Ready to wear articles can not be customized
+                                    All the sleeveless dresses are stitched with sleeves by default until sleeveless is
+                                    requested by the customer. Straight sleeves are attached.</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="text">
+        RELATED PRODUCTS
+    </div>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <div class="card-img-container" style="width: 18rem;">
+                    <img src="/Images/card6-1.webp" class="card-img-top main-img" alt="...">
+                    <img src="/Images/card6-2.webp" class="card-img-top hover-img" alt="...">
+                    <div class="card-body">
+                        <!-- <a href="/thirdpage.html" class="text-decoration-none text-dark"> -->
+                        <p class="card-text">EMBROIDERED NET UF-4183 <br>
+                            <b>PKR 19,950.00</b><br>
+                            FORMAL
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-img-container" style="width: 18rem;">
+                    <img src="/Images/card7-1.webp" class="card-img-top main-img" alt="...">
+                    <img src="/Images/card7-2.webp" class="card-img-top hover-img" alt="...">
+                    <div class="card-body">
+                        <!-- <a href="/thirdpage.html" class="text-decoration-none text-dark"> -->
+                        <p class="card-text">EMBROIDERED NET UF-4183 <br>
+                            <b>PKR 19,950.00</b><br>
+                            FORMAL
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-img-container" style="width: 18rem;">
+                    <img src="/Images/card8-1.webp" class="card-img-top main-img" alt="...">
+                    <img src="/Images/card8-2.webp" class="card-img-top hover-img" alt="...">
+                    <div class="card-body">
+                        <!-- <a href="/thirdpage.html" class="text-decoration-none text-dark"> -->
+                        <p class="card-text">EMBROIDERED NET UF-4183 <br>
+                            <b>PKR 19,950.00</b><br>
+                            FORMAL
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-img-container" style="width: 18rem;">
+                    <img src="/Images/card4-1.webp" class="card-img-top main-img" alt="...">
+                    <img src="/Images/card4-2.webp" class="card-img-top hover-img" alt="...">
+                    <div class="card-body">
+                        <!-- <a href="/thirdpage.html" class="text-decoration-none text-dark"> -->
+                        <p class="card-text">EMBROIDERED NET UF-4183 <br>
+                            <b>PKR 19,950.00</b><br>
+                            FORMAL
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="about">
+            <h4>ABOUT</h4>
+            <p>Who We Are</p>
+            <p>Our Responsibility</p>
+            <p>Service We Provide</p>
+            <p>Careers</p>
+            <p class="location">Our Shop: First Floor, Dolmen Mall, Shop No F-06, A Block DHA Phase 6, Lahore</p>
+
+            <img class="social-icon" src="/Images/socialicon.png" alt="">
+        </div>
+        <div class="customer">
+            <h4>CUSTOMER SERVICE</h4>
+            <p>Contact Us</p>
+            <p>Dispatch Timeline</p>
+            <p>Exchange Information</p>
+            <p>Email: info@baroque.pk</p>
+            <p> UAN 111-302-302 </p>
+            <p>WhatsApp: +92 325 7001111</p>
+
+            <p id="copyright">© 2025 - BAROQUE</p>
+        </div>
+        <div class="policies">
+            <h4>POLICIES</h4>
+            <p>Privacy Policy</p>
+            <p>Refund Policy</p>
+            <p>Shipping Policy</p>
+            <p>Terms of Service</p>
+            <p> Legal </p>
+            <img class="visa-card" src="/Images/visacard.png" alt="">
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
